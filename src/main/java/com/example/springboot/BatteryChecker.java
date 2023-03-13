@@ -20,14 +20,12 @@ public class BatteryChecker {
     }
 
     @PostConstruct
-    public void makeInitBean()
-    {
+    public void makeInitBean() {
         System.out.println("Battery checker bean created...");
     }
 
     @PreDestroy
-    public void makeDestroyBean()
-    {
+    public void makeDestroyBean() {
         System.out.println("Battery checker bean destroyed...");
     }
 

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component("iphoneBean")
-public class Iphone  implements Phone{
+public class Iphone implements Phone {
 
     @Override
     public String getBatteryCapacity() {

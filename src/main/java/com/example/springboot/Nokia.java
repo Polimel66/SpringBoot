@@ -13,6 +13,7 @@ public class Nokia implements Phone {
     public String getMemoryCapacity() {
         return "128 MB";
     }
+
     @Override
     public String getCameraResolution() {
         return "2 megapixels";

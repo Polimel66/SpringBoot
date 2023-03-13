@@ -17,14 +17,12 @@ public class CameraResolutionChecker {
     private Phone secondPhone;
 
     @PostConstruct
-    public void makeInitBean()
-    {
+    public void makeInitBean() {
         System.out.println("Camera resolution checker bean created...");
     }
 
     @PreDestroy
-    public void makeDestroyBean()
-    {
+    public void makeDestroyBean() {
         System.out.println("Camera resolution checker bean destroyed...");
     }
 

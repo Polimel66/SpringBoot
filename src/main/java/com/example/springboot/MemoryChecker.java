@@ -11,6 +11,7 @@ import javax.annotation.PreDestroy;
 public class MemoryChecker {
     private Phone firstPhone;
     private Phone secondPhone;
+
     @Autowired
     public void setPhone(@Qualifier("iphoneBean") Phone firstPhone, @Qualifier("nokiaBean") Phone secondPhone) {
         this.firstPhone = firstPhone;
@@ -18,19 +19,16 @@ public class MemoryChecker {
     }
 
     @PostConstruct
-    public void makeInitBean()
-    {
+    public void makeInitBean() {
         System.out.println("Memory checker bean created...");
     }
 
     @PreDestroy
-    public void makeDestroyBean()
-    {
+    public void makeDestroyBean() {
         System.out.println("Memory checker bean destroyed...");
     }
 
-    public void displayMemoryCapacity()
-    {
+    public void displayMemoryCapacity() {
         System.out.printf("Current memory capacity: Iphone - %s, Nokia - %s.\n", firstPhone.getMemoryCapacity(), secondPhone.getMemoryCapacity());
     }
 }
