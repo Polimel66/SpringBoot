@@ -26,7 +26,4 @@ public class CameraResolutionChecker {
         System.out.println("Camera resolution checker bean destroyed...");
     }
 
-    public void displayCameraResolution() {
-        System.out.printf("Current camera resolution: Iphone - %s, Nokia - %s.\n", firstPhone.getCameraResolution(), secondPhone.getCameraResolution());
-    }
 }

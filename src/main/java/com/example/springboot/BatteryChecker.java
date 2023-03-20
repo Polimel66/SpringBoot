@@ -28,9 +28,4 @@ public class BatteryChecker {
     public void makeDestroyBean() {
         System.out.println("Battery checker bean destroyed...");
     }
-
-
-    public void displayBatteryCapacity() {
-        System.out.printf("Current battery capacity: Iphone - %s, Nokia - %s.\n", firstPhone.getBatteryCapacity(), secondPhone.getBatteryCapacity());
-    }
 }
