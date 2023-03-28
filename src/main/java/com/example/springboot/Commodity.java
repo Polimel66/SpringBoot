@@ -1,18 +1,11 @@
 package com.example.springboot;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
+@Data
 public class Commodity {
-    @Getter
-    @Setter
-    public Double price;
-    @Getter
-    @Setter
-    public Info info;
 
-    public Commodity(Double price, Info info) {
-        this.price = price;
-        this.info = info;
-    }
+    public Double price;
+
+    public Info info;
 }

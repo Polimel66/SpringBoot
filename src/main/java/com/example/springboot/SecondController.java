@@ -13,11 +13,11 @@ public class SecondController {
 
     // будет ошибка, которая обработается ExceptionHandler
     @GetMapping("/commodities")
-    public Commodity getJson(@RequestBody Commodity body, boolean exception) throws CustomException {
-        if (isErrorOn)
+    public Commodity getJson(@RequestBody Commodity body, @RequestParam (required=true) boolean exception) throws CustomException {
+        if (isErrorOn) {
             throw new CustomException("Кастомная ошибка 502");
-        else
-            return body;
+        }
+        return body;
     }
 
     @ExceptionHandler({CustomException.class})

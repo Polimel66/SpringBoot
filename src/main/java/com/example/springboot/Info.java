@@ -1,23 +1,20 @@
 package com.example.springboot;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
-
 public class Info {
     @Getter
     @Setter
     private String date;
     @Getter
     @Setter
-    private int Id;
+    private int id;
 
     public Info(String date, int id) {
         this.date = date;
-        Id = (int) (Math.random()*(200));
+        this.id = ServiceId.generateId();
     }
-
-
 }
