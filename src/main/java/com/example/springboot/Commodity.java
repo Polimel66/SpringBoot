@@ -6,6 +6,6 @@ import javax.validation.constraints.Max;
 
 public class Commodity {
     public Double price;
-    @VendorCode
+    @CombinedAnnotation
     public String vendorCode;
 }
