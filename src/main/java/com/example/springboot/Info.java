@@ -12,9 +12,4 @@ public class Info {
     @Getter
     @Setter
     private int id;
-
-    public Info(String date, int id) {
-        this.date = date;
-        this.id = ServiceId.generateId();
-    }
 }
