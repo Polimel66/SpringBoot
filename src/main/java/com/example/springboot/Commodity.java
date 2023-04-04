@@ -1,11 +1,12 @@
 package com.example.springboot;
 
+import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.Max;
-
+@Data
 public class Commodity {
-    public Double price;
+    private Double price;
     @CombinedAnnotation
-    public String vendorCode;
+    private String vendorCode;
 }
