@@ -7,3 +7,6 @@
     - один создается, только если профиль test, 
     - другой, если существует первый бин, 
     - третий, если в конфиге EXAMPLE_TEST (env var) не “default” (тут в идеале со скриншотом)
+
+ - скрин моих environment variables
+ - ![image](https://user-images.githubusercontent.com/57943773/230985886-08250a32-0751-4b13-b7c9-f38da5acbce9.png)
