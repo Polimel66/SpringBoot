@@ -5,11 +5,12 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class BeansConfig {
     @Bean(name = "FirstBean")
-    @ConditionalOnProperty(prefix = "profile", name = "value", havingValue = "test")
+    @Profile("test")
     public BeanDto makeFirstBean() {
         var beanDto = new BeanDto();
         beanDto.setName("firstSituation");
@@ -27,7 +28,7 @@ public class BeansConfig {
     }
 
     @Bean(name = "ThirdBean")
-    @ConditionalOnProperty(name = "environment_variable", havingValue = "default")
+    @ConditionalOnExpression("!'${environment_variable}'.equals('default')")
     public BeanDto makeThirdBean() {
         var beanDto = new BeanDto();
         beanDto.setName("thirdSituation");
