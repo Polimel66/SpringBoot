@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <changeSet id="11-04-2023-16-31" author="MelnikovaPE">
+        <createTable tableName="listToDo">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="listToDo_pk"/>
+            </column>
+            <column name="nameList" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="case">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="case_pk"/>
+            </column>
+            <column name="nameCase" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="listToDo_id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="item_pk_2"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint  baseTableName="case"
+                                  baseColumnNames="listToDo_id"
+                                  constraintName="case_toDoList_fk"
+                                  referencedTableName="toDoList"
+                                  referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
