@@ -18,6 +18,7 @@ public class Controller {
     @PostMapping("productEvents")
     private ProductDto getProduct(@RequestBody ProductDto product)
     {
+        productService.saveTwoInstancesOfProduct(product);
         return productService.setInformationAboutProduct(product);
     }
 }

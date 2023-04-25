@@ -28,6 +28,7 @@ public class ProductService {
         productRepository.save(product);
         applicationEventPublisher.publishEvent(new SaveToBDEvent(this, product));
         var secondProduct = new ProductDto();
+        secondProduct.setId(78);
         secondProduct.setName("Ожерелье");
         secondProduct.setArticleNumber(5678);
         secondProduct.setCost(new Random().nextInt(5000));

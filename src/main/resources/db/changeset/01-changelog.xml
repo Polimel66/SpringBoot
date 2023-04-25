@@ -12,13 +12,13 @@
             <column name="name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="articleNumber" type="bigint">
+            <column name="article_number" type="bigint">
                 <constraints nullable="false"/>
             </column>
             <column name="cost" type="bigint">
                 <constraints nullable="false"/>
             </column>
-            <column name="quantityStock" type="bigint">
+            <column name="quantity_stock" type="bigint">
                 <constraints nullable="false"/>
             </column>
         </createTable>
