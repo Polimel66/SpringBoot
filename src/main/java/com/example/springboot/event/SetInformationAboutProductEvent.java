@@ -1,5 +1,6 @@
-package com.example.springboot;
+package com.example.springboot.event;
 
+import com.example.springboot.ProductDto;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 

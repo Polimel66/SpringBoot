@@ -1,5 +1,7 @@
 package com.example.springboot;
 
+import com.example.springboot.event.SaveToBDEvent;
+import com.example.springboot.event.SetInformationAboutProductEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
@@ -32,5 +34,6 @@ public class ProductService {
         secondProduct.setQuantityStock(new Random().nextInt(50));
         productRepository.save(secondProduct);
     }
+
 }
 

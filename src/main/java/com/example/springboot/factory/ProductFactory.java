@@ -10,20 +10,21 @@ public class ProductFactory {
 
         var result = new ProductDto();
         result.setName(request.getName());
+        result.setArticleNumber(request.getArticleNumber());
         result.setCost(request.getCost());
+        result.setQuantityStock(request.getQuantityStock());
         return result;
     }
 
-    public static ItemDto to(Item item) {
-        if (item == null) {
+    public static ProductDto to(ProductDto product) {
+        if (product == null) {
             return null;
         }
-
-        return new ItemDto(
-                item.getId(),
-                item.getName(),
-                item.getShop().getId(),
-                item.getCost()
-        );
+        var prod = new ProductDto();
+        prod.setName(product.getName());
+        prod.setArticleNumber(product.getArticleNumber());
+        prod.setCost(product.getCost());
+        prod.setQuantityStock(product.getQuantityStock());
+        return prod;
     }
 }
