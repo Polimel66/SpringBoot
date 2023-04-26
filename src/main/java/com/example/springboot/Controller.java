@@ -18,8 +18,9 @@ public class Controller {
     @PostMapping("productEvents")
     private ProductDto getProduct(@RequestBody ProductDto product)
     {
+        var newProduct = productService.setInformationAboutProduct(product);
         productService.saveTwoInstancesOfProduct(product);
-        return productService.setInformationAboutProduct(product);
+        return newProduct;
     }
 }
 

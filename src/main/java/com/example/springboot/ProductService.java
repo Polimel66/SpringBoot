@@ -18,6 +18,7 @@ public class ProductService {
     {
         product.setCost(new Random().nextInt(5000));
         product.setQuantityStock(new Random().nextInt(50));
+//        product.setId(77L);
         applicationEventPublisher.publishEvent(new SetInformationAboutProductEvent(this, product));
         return product;
     }
@@ -28,7 +29,7 @@ public class ProductService {
         productRepository.save(product);
         applicationEventPublisher.publishEvent(new SaveToBDEvent(this, product));
         var secondProduct = new ProductDto();
-        secondProduct.setId(78);
+//        secondProduct.setId(78L);
         secondProduct.setName("Ожерелье");
         secondProduct.setArticleNumber(5678);
         secondProduct.setCost(new Random().nextInt(5000));

@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Table(name = "first_table")
 public class ProductDto {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     @Column
     private String name;
     @Column
