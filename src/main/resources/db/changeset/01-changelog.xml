@@ -6,7 +6,7 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
     <changeSet id="11-04-2023-16-31" author="MelnikovaPE">
         <createTable tableName="first_table">
-            <column name="id" type="bigint">
+            <column name="id" type="varchar(50)">
                 <constraints primaryKey="true" primaryKeyName="first_table_pk"/>
             </column>
             <column name="name" type="varchar(50)">

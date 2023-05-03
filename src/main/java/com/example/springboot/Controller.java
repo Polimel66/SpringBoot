@@ -1,6 +1,5 @@
 package com.example.springboot;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,8 +18,8 @@ public class Controller {
     private ProductDto getProduct(@RequestBody ProductDto product)
     {
         var newProduct = productService.setInformationAboutProduct(product);
-        productService.saveTwoInstancesOfProduct(product);
-        return newProduct;
+        productService.saveTwoInstancesOfProduct(newProduct);
+        return product;
     }
 }
 
