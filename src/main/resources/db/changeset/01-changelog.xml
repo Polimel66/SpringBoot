@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <changeSet id="11-04-2023-16-31" author="MelnikovaPE">
+        <createTable tableName="first_table">
+            <column name="id" type="varchar(50)">
+                <constraints primaryKey="true" primaryKeyName="first_table_pk"/>
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="article_number" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cost" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="quantity_stock" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>
