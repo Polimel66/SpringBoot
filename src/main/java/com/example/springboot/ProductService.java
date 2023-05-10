@@ -39,6 +39,5 @@ public class ProductService {
         secondProduct.setQuantityStock(new Random().nextInt(50));
         productRepository.save(secondProduct);
     }
-
 }
 
